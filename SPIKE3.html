@@ -14,6 +14,15 @@
 </style><style>.ultrasonic-fieltype div{float:left;cursor:pointer;width:47px;height:26px}.ultrasonic-fieltype .bottomLeft{clear:both}.ultrasonic-fieltype .half-circle{stroke-miterlimit:10}.ultrasonic-fieltype .arc{fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10}.ultrasonic-fieltype .disabled .arc{opacity:0.2}.ultrasonic-fieltype .bottomLeft,.ultrasonic-fieltype .bottomRight{margin-top:-3px;transform:scaleY(-1)}.ultrasonic-fieltype .topLeft,.ultrasonic-fieltype .bottomLeft{margin-right:10px}
 </style>
 <style>
+	/*
+		add to elements you don't want printed
+		from: https://www.geeksforgeeks.org/how-to-hide-an-element-when-printing-a-web-page-using-css/
+	*/
+	@media print {
+		.noprint {
+			visibility: hidden;
+		}
+	}
 	.floating_index {
 		position: fixed;
 		top:10px;
@@ -44,7 +53,7 @@
 </p></div>
 
 <!-- FLOATING INDEX TABLE -->
-	<div class="floating_index">
+	<div class="floating_index noprint">
 		<table style='padding:10px; margin: 10px; border: 1px solid black; background-color: white;'>
 			<tr><th colspan=2 align=right><div class='image_top' onclick='window.scrollTo(0, 0);'></div></th></tr>
 			<tr><th colspan=2>INDEX</th></tr>
